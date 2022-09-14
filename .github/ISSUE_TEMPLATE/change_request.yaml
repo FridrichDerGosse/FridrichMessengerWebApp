@@ -1,0 +1,20 @@
+name: Change request
+description: Small changes for this project
+title: "[Change Request]: <title>"
+labels: ["change"]
+assignees:
+  - LukasKrah
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This Template is for small changes only. For bigger suggesting use the "Feature request" template
+  - type: textarea
+    id: Suggestion
+    attributes:
+      label: Change suggestion
+      description: Describe the changes you would like to see
+      placeholder: Tell us your suggestion
+      value: "Your suggestion here"
+    validations:
+      required: true
