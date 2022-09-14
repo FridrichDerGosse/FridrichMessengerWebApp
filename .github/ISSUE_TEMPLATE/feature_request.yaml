@@ -1,0 +1,20 @@
+name: Feature request
+description: New featuare / idea for this project
+title: "[Feature Request / Suggestion]: <title>"
+labels: ["enhancement"]
+assignees:
+  - LukasKrah
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for suggesting this feature.
+  - type: textarea
+    id: Suggestion
+    attributes:
+      label: Suggestion / Feature Request
+      description: Describe the feature(s) you would like to see added.
+      placeholder: Tell us your suggestion
+      value: "Your suggestion here"
+    validations:
+      required: true

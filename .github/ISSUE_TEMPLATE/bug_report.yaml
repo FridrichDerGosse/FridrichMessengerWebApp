@@ -1,0 +1,58 @@
+name: Bug Report
+description: Report a bug
+title: "[Bug]: <title>"
+labels: ["bug"]
+assignees:
+  - LukasKrah
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting this bug!
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: Describe the issue here.
+      placeholder: Tell us what you see!
+      value: "A bug happened!"
+    validations:
+      required: true
+  - type: dropdown
+    id: browsers
+    attributes:
+      label: What browser are you using?
+      multiple: true
+      options:
+        - Chrome
+        - Firefox
+        - Safari
+        - Microsoft Edge
+    validations:
+      required: true
+  - type: dropdown
+    id: operating-systems
+    attributes:
+      label: On which operating system did the bug happen?
+      multiple: true
+      options:
+        - Linux
+        - Windows
+        - Mac
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Bug description
+      description: Please put down any relevant informations and logs to reproduce the bug.
+      render: console
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: By submitting this issue, you agree to follow our [Code of Conduct](https://example.com)
+      options:
+        - label: I agree to follow this project's Code of Conduct
+          required: true
