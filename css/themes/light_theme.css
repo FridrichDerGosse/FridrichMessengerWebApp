@@ -1,0 +1,17 @@
+:root {
+    color-scheme: light;
+    --background-a: #eeeeee;
+    --background-b: #dddddd;
+    --background-c: #cccccc;
+    --background-d: #bbbbbb;
+
+    --text-color-light: #000000;
+    --text-color: #222222;
+    --text-color-secondary: #444444;
+
+    --colorfull: #0000ff;
+    --colorfull-light: #0088ff;
+    --colorfull-text: var(--background-a);
+
+    --negative-color: #ff0000;
+}

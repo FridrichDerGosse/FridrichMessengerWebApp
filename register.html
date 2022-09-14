@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fridrich Messenger</title>
+    <link rel="stylesheet" href="css/register.css">
+    <script src="js/user_service.js"></script>
+    <script src="js/theme_service.js"></script>
+</head>
+<body>
+    <input class="topleft-btn" type="button" value="Go back"
+           onclick="location.href='index.html'">
+    <form class="container">
+        <div class="header">Register</div>
+        <label for="username">Username</label>
+        <input type="text" name="username" id="username" required>
+        <label for="reg_password">Password</label>
+        <input type="password" name="reg_password" id="reg_password"
+               onkeyup="check_passwords_equal()" required>
+        <label for="reg_password_confirm">Password (confirm)</label>
+        <input type="password" name="reg_password_confirm" id="reg_password_confirm"
+               onkeyup="check_passwords_equal()" required>
+        <label for="email">E-Mail (optional)</label>
+        <input type="email" name="email" id="email">
+        <input class="w-96" type="button" value="REGISTER" name="register" id="register" onclick="toggleTheme()">
+    </form>
+</body>
+</html>

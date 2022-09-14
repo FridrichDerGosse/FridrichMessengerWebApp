@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Fridrich Messenger</title>
+        <link rel="stylesheet" href="css/index.css">
+        <script src="js/theme_service.js"></script>
+        <script src="js/user_service.js"></script>
+    </head>
+    <body>
+        <form class="container">
+            <div class="header">LOGIN</div>
+            <br />
+            <label for="username">Username:</label>
+            <br />
+            <input type="text" id="username" name="username" placeholder="Enter username" required>
+            <br />
+            <label for="password">Password:</label>
+            <br />
+            <input type="password" id="password" name="password" placeholder="Enter password" required>
+            <br />
+            <div style="text-align: center">
+                <input class="w-40" type="button" id="submit" name="submit" value="Login" onclick="log_in()">
+                <label>or</label>
+                <input class="w-40" type="button" id="register" name="register" value="Register now" onclick="location.href='register.html'">
+            </div>
+        </form>
+    </body>
+</html>
