@@ -5,26 +5,85 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Fridrich Messenger</title>
         <link rel="stylesheet" href="css/index.css">
+        <link rel="stylesheet" href="css/register.css">
+        <link rel="stylesheet" href="css/chats.css">
+        <script src="js/socket.js"></script>
         <script src="js/theme_service.js"></script>
         <script src="js/user_service.js"></script>
+        <script src="js/server.js"></script>
     </head>
     <body>
-        <form class="container">
-            <div class="header">LOGIN</div>
-            <br />
-            <label for="username">Username:</label>
-            <br />
-            <input type="text" id="username" name="username" placeholder="Enter username" required>
-            <br />
-            <label for="password">Password:</label>
-            <br />
-            <input type="password" id="password" name="password" placeholder="Enter password" required>
-            <br />
-            <div style="text-align: center">
-                <input class="w-40" type="button" id="submit" name="submit" value="Login" onclick="log_in()">
-                <label>or</label>
-                <input class="w-40" type="button" id="register" name="register" value="Register now" onclick="location.href='register.html'">
+        <div id="login_page" class="page">
+            <form class="container">
+                <div class="header">LOGIN</div>
+                <br />
+                <label for="username">Username:</label>
+                <br />
+                <input type="text" id="username" name="username" placeholder="Enter username" required>
+                <br />
+                <label for="password">Password:</label>
+                <br />
+                <input type="password" id="password" name="password" placeholder="Enter password" required>
+                <br />
+                <div style="text-align: center">
+                    <input class="w-40" type="button" id="submit" name="submit" value="Login" onclick="login()">
+                    <label>or</label>
+                    <input class="w-40" type="button" id="register" name="register"
+                           value="Register now" onclick="route('register_page')">
+                </div>
+                <div id="login_error" class="error_text"></div>
+            </form>
+        </div>
+
+        <div id="register_page" class="page hidden">
+            <input class="topleft-btn" type="button" value="Go back"
+               onclick="route('login_page')">
+            <form class="container">
+                <div class="header">Register</div>
+
+                <label for="reg_username">Username</label>
+                <input type="text" name="reg_username" id="reg_username"
+                       placeholder="Enter username" required>
+
+                <label for="reg_password">Password</label>
+                <input type="password" name="reg_password" id="reg_password"
+                       placeholder="Enter password" onkeyup="check_passwords_equal()" required>
+
+                <label for="reg_password_confirm">Password (confirm)</label>
+                <input type="password" name="reg_password_confirm" id="reg_password_confirm"
+                       placeholder="Confirm password" onkeyup="check_passwords_equal()" required>
+
+                <label for="reg_email">E-Mail (optional)</label>
+                <input type="email" name="reg_email" id="reg_email" placeholder="Optional email-address">
+                <input class="w-96" type="button" value="REGISTER" name="do_register" id="do_register" onclick="register_new()">
+
+                <div id="reg_error" class="error_text"></div>
+            </form>
+        </div>
+
+        <div id="chat_page" class="page hidden">
+            <button onclick="route('login_page'); sock = new WebSocket('ws://192.168.7.15:3588')">Ausloggen</button>
+            <div class="row">
+                <div class="column-1">
+                    <div style="height: 10rem">TEST</div>
+                    <div style="height: 10rem">TEST</div>
+                    <div style="height: 10rem">TEST</div>
+                    <div style="height: 10rem">TEST</div>
+                    <div style="height: 10rem">TEST</div>
+                    <div style="height: 10rem">TEST</div>
+                    <div style="height: 10rem">TEST</div>
+                    <div style="height: 10rem">TEST</div>
+                    <div style="height: 10rem">TEST</div>
+                    <div style="height: 10rem">TEST</div>
+                    <div style="height: 10rem">TEST</div>
+                    <div style="height: 10rem">TEST</div>
+                    <div style="height: 10rem">TEST</div>
+                    <div style="height: 10rem">TEST</div>
+                    <div style="height: 10rem">TEST</div>
+                    <div style="height: 10rem">TEST</div>
+                </div>
+                <div class="column-2">Test2</div>
             </div>
-        </form>
+        </div>
     </body>
 </html>
