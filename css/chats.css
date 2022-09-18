@@ -1,0 +1,25 @@
+.row {
+    display: table;
+    width: 100%; /*Optional*/
+    table-layout: fixed; /*Optional*/
+    border-spacing: 10px; /*Optional*/
+    height: 90%;
+    overflow: hidden;
+
+}
+.column-1 {
+    overflow: auto;
+    width: 30%;
+    display: table-cell;
+    background-color: red;
+    height: inherit;
+    background-repeat:repeat-y;
+    position:absolute
+}
+
+.column-2 {
+    width: 70%;
+    display: table-cell;
+    background-color: blue;
+    overflow: hidden;
+}

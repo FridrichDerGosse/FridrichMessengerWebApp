@@ -1,0 +1,17 @@
+:root {
+    color-scheme: dark;
+    --background-a: #222222;
+    --background-b: #333333;
+    --background-c: #444444;
+    --background-d: #555555;
+
+    --text-color-light: #ffffff;
+    --text-color: #cfcfcf;
+    --text-color-secondary: #adadad;
+
+    --colorfull: #0000ff;
+    --colorfull-light: #0088ff;
+
+    --negative-color: #ff0000;
+    --negative-color-light: #ff4400;
+}
